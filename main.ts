@@ -44,6 +44,7 @@ input.onButtonPressed(Button.AB, function () {
         }
         basic.pause(50)
     }
+    校正()
 })
 function 亮起 () {
     if (燈號 < 6) {
