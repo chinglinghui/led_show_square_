@@ -1,20 +1,8 @@
 let 燈號 = 0
 let X = 0
 let Y = 0
-input.onButtonPressed(Button.A, function () {
-    燈號 = 0
-    for (let index = 0; index < 25; index++) {
-        燈號 += 1
-        basic.pause(50)
-        切換()
-        if (input.buttonIsPressed(Button.A) || input.buttonIsPressed(Button.B)) {
-            break;
-        }
-    }
-    basic.pause(50)
-    校正()
-})
-function 切換 () {
+let 行數 = 0
+function 切換1 () {
     if (燈號 < 6) {
         X = 燈號 - 1
         Y = 0
@@ -43,10 +31,30 @@ function 切換 () {
     led.setBrightness(255)
     led.toggle(X, Y)
 }
+input.onButtonPressed(Button.A, function () {
+    燈號 = 0
+    for (let index = 0; index < 25; index++) {
+        燈號 += 1
+        basic.pause(50)
+        切換1()
+        if (input.buttonIsPressed(Button.A) || input.buttonIsPressed(Button.B)) {
+            break;
+        }
+    }
+    basic.pause(50)
+    校正()
+})
+input.onButtonPressed(Button.AB, function () {
+    燈號 = 0
+    行數 = 0
+    for (let index = 0; index < 25; index++) {
+    	
+    }
+})
 input.onButtonPressed(Button.B, function () {
     燈號 = 25
     for (let index = 0; index < 25; index++) {
-        切換()
+        切換1()
         燈號 += -1
         basic.pause(50)
         if (input.buttonIsPressed(Button.A) || input.buttonIsPressed(Button.B)) {
