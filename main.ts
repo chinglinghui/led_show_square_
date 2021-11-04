@@ -42,7 +42,7 @@ input.onButtonPressed(Button.AB, function () {
             切換()
             basic.pause(50)
         }
-        basic.pause(50)
+        basic.pause(60)
     }
 })
 function 亮起 () {
