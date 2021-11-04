@@ -34,17 +34,16 @@ input.onButtonPressed(Button.AB, function () {
     行數 = 4
     for (let index = 0; index < 4; index++) {
         行數 += 1
-        X = 4
-        Y = 行數 - 4
+        X = 5
+        Y = 行數 - 5
         for (let index = 0; index < 9 - 行數; index++) {
-            切換()
             X += -1
             Y += 1
+            切換()
             basic.pause(50)
         }
         basic.pause(50)
     }
-    校正()
 })
 function 亮起 () {
     if (燈號 < 6) {
